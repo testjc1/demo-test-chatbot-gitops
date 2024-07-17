@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels: 
+    app.kubernetes.io/instance: demo-test-chatbot
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: demo-test-chatbot 
+  name: demo-test-chatbot
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 100Gi
